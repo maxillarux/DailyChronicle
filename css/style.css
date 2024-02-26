@@ -1,0 +1,310 @@
+/* text formattings */
+body {
+    background-color: #f3f3f3;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 70px;
+}
+
+h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    color:#0052a5;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    color:#3498db;
+    font-size: 25px;
+}
+
+p {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 16px;
+}
+
+a{
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 16px;
+}
+
+/* read more button */
+a.read-more {
+    display: inline-block;
+    padding: 10px 20px; /* adjust the padding to make the button smaller */
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+/* change text color on hover */
+a.read-more:hover {
+    background-color: #0052a5;
+}
+
+/* nav bar stuff */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-size: 20px;
+    padding: 20px;
+}
+
+nav a:hover {
+    color: #0052a5;
+}
+
+/* home page article formatting */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px;
+}
+
+.featured-article {
+    flex: 2;
+}
+
+.featured-article h2 {
+    font-size: 60px;
+}
+
+.featured-article h3 {
+    font-size: 40px;
+}
+
+.featured-article p {
+    font-size: 20px;
+}
+
+.featured-article img {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+
+.latest-news {
+    flex: 1;
+}
+
+.latest-news img {
+    border-radius: 10px;
+}
+
+/* contact us */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+/* article stuff */
+.article {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* two columns: article content and sidebar */
+    gap: 20px;
+}
+
+/* article stuff */
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f3f3f3;
+    color: #3498db;
+}
+
+.article-header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.article-header p {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+/* img below article on home page */
+.article-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* img next to article on article page */
+.article-img-column {
+    padding: 20px;
+}
+
+/* when the window size is small, the text reads vertically and header gets aligned to the center */
+@media (max-width: 768px) {
+    .article, .article-header, .article-content, .article-img-column, .article-img-column img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-header {
+        align-items: center; 
+    }
+
+    .article-header h1, .article-header p {
+        text-align: center; 
+    }
+}
+
+/* advertisement stuff */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.advertisement {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+/* pinterest esc flow */
+.container {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: box-shadow 0.5s;
+}
+
+/* on hover, add a little box shadow and change to pointer to indicate clickability */
+.photo img:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,1); 
+    cursor: pointer;
+}
+
+
+/* opening up pictures */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9); /* adjust the transparency as needed */
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* adjust the maximum width as needed */
+    max-height: 80%; /* adjust the maximum height as needed */
+}
+
+/* close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* hamburger button */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* display hamburger at smaller resolutions */
+@media (max-width: 768px) {
+    /* centers button after clicking */
+    .hamburger {
+        display: inline-flex;
+        position: relative;
+        justify-content: center; 
+        align-items: center; 
+        transition: transform 0.3s; /* transition animation to sideways icon*/
+    }
+
+    /* rotates icon after clicking */
+    .hamburger.clicked {
+        transform: rotate(90deg);
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}

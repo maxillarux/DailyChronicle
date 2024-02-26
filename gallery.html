@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header>
+            <h1>Photo Gallery</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <!-- scripts for opening the menu -->
+                <script>
+                    function toggleMenu() {
+                        const hamburger = document.querySelector('.hamburger');
+                        hamburger.classList.toggle('clicked');
+                    }
+                </script>
+                <script>
+                    document.querySelector('.hamburger').addEventListener('click', function() {
+                        document.querySelector('nav ul').classList.toggle('active');
+                    });
+                </script>
+            </nav>
+        </header>
+
+        <!-- crap load of photos -->
+        <div class="container">
+            <div class="photo-gallery">
+                <div class="column">
+                    <div class="photo"><img src="images/4.jpg" alt=""></div>
+                    <div class="photo"><img src="images/5.jpg" alt=""></div>
+                    <div class="photo"><img src="images/6.jpg" alt=""></div>
+                    <div class="photo"><img src="images/7.jpg" alt=""></div>
+                    <div class="photo"><img src="images/8.jpg" alt=""></div>
+                    <div class="photo"><img src="images/9.jpg" alt=""></div>
+                </div>
+                <div class="column">
+                    <div class="photo"><img src="images/10.jpg" alt=""></div>
+                    <div class="photo"><img src="images/11.jpg" alt=""></div>
+                    <div class="photo"><img src="images/12.jpg" alt=""></div>
+                    <div class="photo"><img src="images/13.jpg" alt=""></div>
+                    <div class="photo"><img src="images/14.jpg" alt=""></div>
+                    <div class="photo"><img src="images/16.jpg" alt=""></div>
+                    <div class="photo"><img src="images/25.jpg" alt=""></div>
+                    <div class="photo"><img src="images/17.jpg" alt=""></div>
+                </div>
+                <div class="column">
+                    <div class="photo"><img src="images/15.jpg" alt=""></div>
+                    <div class="photo"><img src="images/19.jpg" alt=""></div>
+                    <div class="photo"><img src="images/20.jpg" alt=""></div>
+                    <div class="photo"><img src="images/21.jpg" alt=""></div>
+                    <div class="photo"><img src="images/22.jpg" alt=""></div>
+                    <div class="photo"><img src="images/23.jpg" alt=""></div>
+                    <div class="photo"><img src="images/26.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- for opening up the images -->
+        <div class="modal" id="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
+
+        <script>
+            var modal = document.getElementById("modal");
+
+            var images = document.querySelectorAll('.photo img');
+            var modalImg = document.getElementById("modal-image");
+            images.forEach(function(img) {
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            });
+
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

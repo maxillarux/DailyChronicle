@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <body>
+        <header>
+            <h1>The Daily Chronicle</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                
+                <!-- scripts for opening the menu -->
+                <script>
+                    function toggleMenu() {
+                        const hamburger = document.querySelector('.hamburger');
+                        hamburger.classList.toggle('clicked');
+                    }
+                </script>
+                <script>
+                    document.querySelector('.hamburger').addEventListener('click', function() {
+                        document.querySelector('nav ul').classList.toggle('active');
+                    });
+                </script>
+            </nav>
+        </header>
+        <main>
+            <!-- featured article -->
+            <section class="featured-article">
+                <h2>Featured Article</h2>
+                <article>
+                    <h3>The Mystery of the Lost City: Uncovering Ancient Ruins</h3>
+                    <div class="article-img">
+                        <img src="images/featured-article.jpg" alt="Featured Article Image">
+                    </div>
+                    <p>In a groundbreaking archaeological discovery, researchers have unearthed the remains of an ancient city believed to have been lost for centuries. Nestled deep within the dense jungles of South America, the ruins offer tantalizing clues about a once-thriving civilization shrouded in mystery.</p>
+                    <p>The excavation, led by a team of international experts, began with a series of tantalizing clues unearthed by local explorers. Hidden beneath layers of vegetation and obscured from modern eyes, the city's secrets lay undisturbed for generations until now.</p>
+                    <a href="article.html#article1" class="read-more">Read more</a>
+                </article>
+            </section>
+
+            <!-- latest news -->
+            <section class="latest-news">
+                <h2>Latest News</h2>
+                <article>
+                    <h3>New Breakthrough in Renewable Energy Technology</h3>
+                    <div class="article-img">
+                        <img src="images/news-thumbnail-1.jpg" alt="News Thumbnail">
+                    </div>
+                    <p>In a significant development for the renewable energy sector, scientists have announced a groundbreaking breakthrough in solar panel technology that promises to revolutionize the way we harness solar energy.</p>
+                    <a href="article.html#article2" class="read-more">Read more</a>
+                </article>
+                <article>
+                    <h3>Scientists Discover New Species of Tiger in the Amazon Rainforest</h3>
+                    <div class="article-img">
+                        <img src="images/news-thumbnail-2.jpg" alt="News Thumbnail">
+                    </div>
+                    <p>In a thrilling development for conservationists and wildlife enthusiasts alike, scientists have announced the discovery of a previously unknown species of tiger deep within the heart of the Amazon rainforest.</p>
+                    <a href="article.html#article3" class="read-more">Read more</a>
+                </article>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <p>Contact us at daily@chronicle.com</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Page</title>
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header>
+            <h1>Articles</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <!-- scripts for opening the menu -->
+                <script>
+                    function toggleMenu() {
+                        const hamburger = document.querySelector('.hamburger');
+                        hamburger.classList.toggle('clicked');
+                    }
+                </script>
+                <script>
+                    document.querySelector('.hamburger').addEventListener('click', function() {
+                        document.querySelector('nav ul').classList.toggle('active');
+                    });
+                </script>
+            </nav>
+        </header>
+
+        <article id="article1">
+            <header class="article-header">
+                <h1>The Mystery of the Lost City: Uncovering Ancient Ruins</h1>
+                <p>By Dr. Amelia Reynolds | 02/14/24</p>
+            </header>
+            <main class="article-content">
+                <section>
+                    <h2>Introduction</h2>
+                    <p>In a groundbreaking archaeological discovery, researchers have unearthed the remains of an ancient city believed to have been lost for centuries. Nestled deep within the dense jungles of South America, the ruins offer tantalizing clues about a once-thriving civilization shrouded in mystery.</p>
+                    <p>The excavation, led by a team of international experts, began with a series of tantalizing clues unearthed by local explorers. Hidden beneath layers of vegetation and obscured from modern eyes, the city's secrets lay undisturbed for generations until now.</p>
+                </section>
+                <section>
+                    <h2>Discoveries Unveiled</h2>
+                    <p>As archaeologists delve deeper into the site, they uncover intricate stone carvings, elaborate structures, and artifacts that shed light on the daily lives and customs of the ancient inhabitants. Each artifact tells a story, offering a glimpse into a rich and complex culture that flourished in a time long past.</p>
+                    <p>Yet, with every revelation comes new questions. Who were the people who built this magnificent city? What led to its downfall? And what secrets still lie buried beneath the earth, waiting to be uncovered? As the excavation continues, researchers remain hopeful that the lost city will reveal its secrets, offering valuable insights into the history of humanity and the civilizations that came before us.</p>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>The discovery of the lost city represents a milestone in archaeological research, providing a window into a forgotten chapter of human history. As scholars continue to study the site and analyze its findings, we may come one step closer to understanding the mysteries of our past.</p>
+                </section>
+            </main>
+        </article>
+
+        <article id="article2">
+            <header class="article-header">
+                <h1>New Breakthrough in Renewable Energy Technology</h1>
+                <p>By Benjamin Hayes | 02/7/24</p>
+            </header>
+            <main class="article-content">
+                <section>
+                    <h2>Introduction</h2>
+                    <p>In a significant development for the renewable energy sector, scientists have announced a groundbreaking breakthrough in solar panel technology that promises to revolutionize the way we harness solar energy.</p>
+                    <p>Researchers at the forefront of renewable energy research have developed a new type of solar panel that boasts unprecedented efficiency and durability. By incorporating cutting-edge materials and innovative design principles, the new panels are capable of converting sunlight into electricity with unparalleled efficiency.</p>
+                </section>
+                <section>
+                    <h2>Key Features</h2>
+                    <p>The key feature of the new solar panels lies in their advanced photovoltaic cells, which are engineered to capture a broader spectrum of sunlight and convert it into usable energy more effectively than ever before. Additionally, the panels are designed to withstand harsh weather conditions and require minimal maintenance, making them an attractive option for both residential and commercial applications.</p>
+                    <p>The implications of this breakthrough are immense. With solar energy poised to play an increasingly critical role in the transition to a sustainable energy future, the development of more efficient and affordable solar panels represents a significant step forward in the fight against climate change. The widespread adoption of these new panels could reduce reliance on fossil fuels, lower carbon emissions, and help mitigate the impacts of global warming.</p>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>As the world grapples with the urgent need to transition to clean and renewable sources of energy, innovations like the new solar panels offer hope for a brighter and more sustainable future. With continued investment in research and development, the dream of a world powered by clean and limitless energy may soon become a reality.</p>
+                </section>
+            </main>
+        </article>
+
+        <article id="article3">
+            <header class="article-header">
+                <h1>Scientists Discover New Species of Tiger in the Amazon Rainforest</h1>
+                <p>By Isabella Sanchez | 02/1/24</p>
+            </header>
+            <main class="article-content">
+                <section>
+                    <h2>Introduction</h2>
+                    <p>In a thrilling development for conservationists and wildlife enthusiasts alike, scientists have announced the discovery of a previously unknown species of tiger deep within the heart of the Amazon rainforest. The revelation has sparked excitement and intrigue among researchers, who believe that this newfound tiger species could offer valuable insights into the diversity and resilience of life in one of the world's most biodiverse regions.</p>
+                    <p>The discovery of the new tiger species came as a surprise to researchers conducting a biodiversity survey in the remote reaches of the Amazon rainforest. Initial sightings of the elusive big cat, distinguished by its unique markings and behaviors, prompted further investigation, ultimately leading to the confirmation of its status as a distinct species.</p>
+                </section>
+                <section>
+                    <h2>Distinct Characteristics</h2>
+                    <p>The newly discovered tiger species, tentatively named the "Amazonian tiger," exhibits a number of distinctive characteristics that set it apart from its more well-known relatives. Its fur is marked by a striking pattern of stripes and spots, perfectly adapted to the dappled sunlight and dense foliage of the rainforest canopy. Additionally, the Amazonian tiger is believed to possess a more solitary and elusive nature, making it particularly challenging to study and observe in its natural habitat.</p>
+                    <p>While the discovery of a new tiger species is cause for celebration, it also raises concerns about the conservation status of these majestic animals. Habitat loss, poaching, and human encroachment pose significant threats to tiger populations worldwide, including the newly discovered Amazonian tiger. Conservation efforts must be intensified to protect these iconic creatures and their fragile ecosystems from further degradation and destruction.</p>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>The discovery of the Amazonian tiger serves as a reminder of the importance of preserving and protecting the world's remaining wilderness areas. As stewards of our planet, it is our responsibility to safeguard the rich biodiversity of the Amazon rainforest and ensure a future where tigers and other wildlife can thrive.</p>
+                    <p> As scientists continue to study and document the newly discovered Amazonian tiger, they are reminded of the wonders of the natural world and the endless mysteries that await discovery. The revelation of this new tiger species serves as a testament to the resilience and adaptability of life on Earth, inspiring us to redouble our efforts to conserve and protect the incredible diversity of life that surrounds us.</p>
+                </section>
+            </main>
+        </article>
+
+        <!-- advertisement -->
+        <aside class="sidebar">
+            <section class="advertisement">
+                <h3>Adopt Kittens!</h3>
+                <p>Find your perfect kitten companion today.</p>
+            </section>
+        </aside>
+    </body>
+</html>
